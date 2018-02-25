@@ -30,6 +30,7 @@ Personal eternal computing system
 * Personal
   * Private by default
   * Sharable by choice
+  * Personal ownership and responsibility
 * Eternal
   * Distributable
   * Verifiable
