@@ -21,6 +21,9 @@ Personal eternal computing system
   mind might change
 * Encourage experiments by limiting the scope of their
   concequences
+* If the system is personal and eternal, most of the time using it
+  will be as an expert. Optimize efficiency for expert (in the
+  system) usage.
 
 # Principles
 
@@ -31,5 +34,9 @@ Personal eternal computing system
   * Distributable
   * Verifiable
   * Fully represented as data
-* Simple
-* 
+* Simplicity
+* Accessibility
+  * Culturally
+  * Finantially
+  * For Humans
+  * Remember disabilities
