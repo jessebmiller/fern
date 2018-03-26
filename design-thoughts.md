@@ -24,3 +24,31 @@ Positions are not a repelacement for shell commands and the unix philosophy, but
 are rather personal computing configurations that you have found you want to get
 to frequently enough to describe them in code and name them.
 
+## Security
+
+Security should be built in from the beginning, Encryption should be handeled
+without giving the user much room to shoot themselves in the foot.
+
+It's worth annoying experts quite a bit in order to make it safe and accessible
+to non-expert computer users. Expertise in using fern, that all users who stick
+with it will get should naturally and transparently translate to good safe
+security practices.
+
+## Interface
+
+Rough list of things we might want fern to be able to do
+
+* List and search available positions
+* Create new positions
+* Edit existing positions
+* Save the state of a position
+* Arrange existing positions (execute them, set them up..)
+  * This is the part where fern makes sure you have Chrome installed and opens
+    with all the tabs the position states
+  * or clones the git repo where it's suposed to and opens it with emacs
+
+## Parameterized positions
+
+It's probably useful to have a system that allows generalized positions to be
+parameterized, like a GitHub general position that can be instantiated with the
+users different repos kept on GitHub.
