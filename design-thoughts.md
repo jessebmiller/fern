@@ -1,7 +1,7 @@
 # Some thoughts on design
 
-This document is intended as a rough early draft of my thinking about the design
-and goals of fern and the system architecture
+This isa rough early draft of my thinking about the design and goals of fern and
+the system architecture
 
 ## Fern manages names for the things you do
 
@@ -52,3 +52,34 @@ Rough list of things we might want fern to be able to do
 It's probably useful to have a system that allows generalized positions to be
 parameterized, like a GitHub general position that can be instantiated with the
 users different repos kept on GitHub.
+
+## Architecture
+
+### Position definitions
+
+Configuration for the CLI telling it what positions there are and how to handle
+or arrange them.
+
+Positions might consist of:
+
+* Name
+* Storage pipeline (maybe tar -> bzip -> erasure encode -> encrypt -> ipfs)
+  * pipeline step config (encryption keys, erasure code parameters...)
+* Local location
+* Get script
+* Put script
+* Use script
+
+### CLI (or TUI?)
+
+Interface that manages positions.
+
+### Storage Interfaces
+
+The position state needs to be stored and backed up somewhere and somehow
+described in the position definition. Storage interfaces are responsible for
+putting and getting the state from it's storage location.
+
+Storage interfaces should be composable with middleware that can do things like
+encryption, compression, and erasure encoding when putting and getting form
+certain storage locations if the position requires it.
