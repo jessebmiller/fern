@@ -42,10 +42,11 @@ Rough list of things we might want fern to be able to do
 * Create new positions
 * Edit existing positions
 * Save the state of a position
-* Arrange existing positions (execute them, set them up..)
+* Arrange existing positions (execute, set up, enact, open..)
   * This is the part where fern makes sure you have Chrome installed and opens
     with all the tabs the position states
   * or clones the git repo where it's suposed to and opens it with emacs
+* Close, tear down, stop positions
 
 ## Parameterized positions
 
