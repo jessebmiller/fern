@@ -1,13 +1,14 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2019-08-10 23:19:06.965
+CREATE EXTENSION "uuid-ossp";
+
+begin;
 
 -- tables
 -- Table: accounts
 create type balance_category as enum ('asset', 'liability', 'equity');;
 
 CREATE TABLE accounts (
-    id int  NOT NULL,
-    name varchar(256)  NOT NULL,
+    id uuid  NOT NULL DEFAULT uuid_generate_v1mc(),
+    name varchar(256) NOT NULL UNIQUE,
     balance_category balance_category  NOT NULL,
     CONSTRAINT accounts_pk PRIMARY KEY (id)
 );
@@ -16,18 +17,18 @@ CREATE TABLE accounts (
 create type entry_type as enum ('credit', 'debit');;
 
 CREATE TABLE entries (
-    id int  NOT NULL,
-    type entry_type  NOT NULL,
-    amount_usd money  NOT NULL,
-    transaction_id int  NOT NULL,
-    account_id int  NOT NULL,
+    id uuid  NOT NULL DEFAULT uuid_generate_v1mc(),
+    type entry_type NOT NULL,
+    amount_usd money NOT NULL,
+    transaction_id uuid NOT NULL,
+    account_id uuid NOT NULL,
     CONSTRAINT entries_pk PRIMARY KEY (id)
 );
 
 -- Table: transactions
 CREATE TABLE transactions (
-    id int  NOT NULL,
-    conducted_at timestamp  NOT NULL,
+    id uuid  NOT NULL DEFAULT uuid_generate_v1mc(),
+    conducted_at timestamp NOT NULL default now(),
     CONSTRAINT transactions_pk PRIMARY KEY (id)
 );
 
@@ -50,3 +51,4 @@ ALTER TABLE entries ADD CONSTRAINT entries_transactions
 
 -- End of file.
 
+commit;

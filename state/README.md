@@ -8,7 +8,7 @@ Databases, file systems, and piles of SQL
 
 Inspired by Nerium, a metadata driven storage system.
 
-a personal data warehouse and garage. for life.
+a personal data lake, warehouse, and garage. for life.
 
 ## Interface
 
@@ -19,6 +19,9 @@ put some stuff in
 get some stuff out
 
 model some stuff
+- finances
+- personal projects and todos
+- self quantification measurements
 - files and folders
 - photos and albums
 - songs and albums
