@@ -1,6 +1,6 @@
 # Some thoughts on design
 
-This isa rough early draft of my thinking about the design and goals of fern and
+This isca rough early draft of my thinking about the design and goals of fern and
 the system architecture
 
 ## Fern manages names for the things you do
@@ -74,6 +74,9 @@ Positions might consist of:
 Remember https://github.com/genuinetools/binctr
 Using containers and packaging them as binaries (that can be managed by systemd)
 could be very convinient
+
+Remember https://github.com/genuinetools/img
+building containers cross platform, enables ARM architectures
 
 ### CLI (or TUI?)
 
