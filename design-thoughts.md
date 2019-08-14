@@ -71,6 +71,10 @@ Positions might consist of:
 * Put script
 * Use script
 
+Remember https://github.com/genuinetools/binctr
+Using containers and packaging them as binaries (that can be managed by systemd)
+could be very convinient
+
 ### CLI (or TUI?)
 
 Interface that manages positions.
