@@ -1,3 +1,8 @@
+---toml
+purpose = "migration"
+version = "0.1.0"
+---
+
 CREATE EXTENSION "uuid-ossp";
 
 begin;
@@ -31,6 +36,8 @@ CREATE TABLE transactions (
     conducted_at timestamp NOT NULL default now(),
     CONSTRAINT transactions_pk PRIMARY KEY (id)
 );
+
+-- TODO: add a check constraint to ensure all transactions are balanced
 
 -- foreign keys
 -- Reference: entries_accounts (table: entries)

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  presto:
+    build: .
+    links:
+      - rdbms
+    depends_on:
+      - rdbms
+    ports:
+      - "8080:8080"
+
+  rdbms:
+    build: rdbms
+

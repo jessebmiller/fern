@@ -1,11 +1,12 @@
-import pugsql
 # from emblem_standards_lab import cfg
-import os
 from datetime import datetime
+from sqlalchemy import create_engine
 
-cfg = os.environ.get
+cfg = {
+    "db_url": "pg"
+}
 
-db = create_engine(cfg("TX_DB"))
+db = create_engine(cfg["db_url"])
 
 store = createStore(db, os.path.abspath("./store"))
 
