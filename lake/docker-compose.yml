@@ -1,7 +1,11 @@
 version: '3'
 services:
-  presto:
-    build: .
+
+  rdbms:
+    build: rdbms
+
+  ingestion:
+    build: ingestion
     links:
       - rdbms
     depends_on:
@@ -9,6 +13,12 @@ services:
     ports:
       - "8080:8080"
 
-  rdbms:
-    build: rdbms
+  sql-etl:
+    build: sql-etl
+    links:
+      - rbdms
+    depends_on:
+      -rbdms
+
+
 
