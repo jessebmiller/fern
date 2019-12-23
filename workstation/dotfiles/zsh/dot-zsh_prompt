@@ -19,7 +19,7 @@ function git_prompt_color() {
     fi
 }
 
-GIT_PROMPT_PREFIX="on "
+GIT_PROMPT_PREFIX="±"
 GIT_PROMPT_POSTFIX=""
 
 function git_prompt() {
@@ -43,5 +43,5 @@ function user_prompt() {
 }
 
 PROMPT='
-$(user_prompt) at %m in %{$fg[white]%}%~%{$reset_color%} $(git_prompt)
-%(?..%{$fg[red]%})❯%{$reset_color%} '
+$(user_prompt)@%m %{$fg[white]%}%~%{$reset_color%} $(git_prompt)
+%(?..%{$fg[red]%}).%{$reset_color%} '
