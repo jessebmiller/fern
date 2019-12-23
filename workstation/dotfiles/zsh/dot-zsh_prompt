@@ -44,4 +44,4 @@ function user_prompt() {
 
 PROMPT='
 $(user_prompt)@%m %{$fg[white]%}%~%{$reset_color%} $(git_prompt)
-%(?..%{$fg[red]%}).%{$reset_color%} '
+%(?..%{$fg[red]%})->%{$reset_color%} '
