@@ -1,0 +1,16 @@
+;;; -*- coding: utf-8 -*-
+(("/tmp/"
+  (dired-filename . "/tmp/.CFUserTextEncoding"))
+ ("/root/.emacs.d/elpa/solidity-mode-20170712.1442/solidity-mode-autoloads.el" . 467)
+ ("/root/.emacs.d/init.el" . 631)
+ ("/root/.emacs.d/elpa/archives/gnu/archive-contents" . 22872)
+ ("/root/.emacs.d/elpa/archives/marmalade/archive-contents" . 115573)
+ ("/root/.emacs.d/elpa/git-commit-mode-1.0.0/git-commit-mode-autoloads.el" . 804)
+ ("/root/.emacs.d/elpa/git-rebase-mode-1.0.0/git-rebase-mode-autoloads.el" . 778)
+ ("/root/.emacs.d/elpa/go-mode-20131222/go-mode-autoloads.el" . 2816)
+ ("/root/.emacs.d/elpa/ido-ubiquitous-2.10/ido-ubiquitous-autoloads.el" . 1291)
+ ("/root/.emacs.d/elpa/magit-1.4.1/magit-autoloads.el" . 26248)
+ ("/root/.emacs.d/elpa/markdown-mode-2.0/markdown-mode-autoloads.el" . 552)
+ ("/root/.emacs.d/elpa/smex-3.0/smex-autoloads.el" . 384)
+ ("/root/.emacs.d/elpa/ssh-file-modes-1.20150626/ssh-file-modes-autoloads.el" . 840)
+ ("/root/.emacs.d/elpa/yaml-mode-0.0.9/yaml-mode-autoloads.el" . 603))

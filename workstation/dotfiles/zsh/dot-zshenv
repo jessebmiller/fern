@@ -1,0 +1,15 @@
+help() {
+    # Display helpful functions
+    echo "clone: clone stuff from your repo"
+}
+
+clone() {
+    # Clone a repo from your github
+    # This really is only ever a dependancy for working with a repo locally
+    # can this be abstracted furthur?
+    git clone git@github.com:jessebmiller/$1.git
+}
+
+alias ls='ls -G' # list with color
+alias ll='ls -Ghl' # list with color, readable filesize, long format
+alias la='ls -Ghla' # list with color, readable, long, and hidden

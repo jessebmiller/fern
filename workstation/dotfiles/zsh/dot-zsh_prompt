@@ -1,0 +1,47 @@
+setopt prompt_subst
+autoload -U colors
+colors
+
+function git_ref() {
+    # Show the branch or whatever we are on if we are in a git repo
+    local ref
+    ref=$(command git symbolic-ref --short HEAD 2> /dev/null) || \
+        ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
+        return 0
+    echo "$(git_prompt_color)$ref%{$reset_color%}"
+    return 0
+}
+
+function git_prompt_color() {
+    local dirty=$(git status --porcelain 2> /dev/null | tail -n1)
+    if [[ -n $dirty ]]; then
+        echo "%{$fg[red]%}"
+    fi
+}
+
+GIT_PROMPT_PREFIX="on "
+GIT_PROMPT_POSTFIX=""
+
+function git_prompt() {
+    local GIT_REF="$(git_ref)"
+    if [[ -z $GIT_REF ]]; then
+        return 0
+    fi
+    GIT_PROMPT="$GIT_PROMPT_PREFIX$GIT_REF$GIT_PROMPT_POSTFIX"
+    echo "$GIT_PROMPT"
+    return 0
+}
+
+function user_prompt() {
+    local username
+    if [[ $(print -P "%#") == '#' ]]; then
+        username="%{$fg[red]%}Privileged%{$reset_color%}"
+    else
+        username="$(whoami)"
+    fi
+    echo $username
+}
+
+PROMPT='
+$(user_prompt) at %m in %{$fg[white]%}%~%{$reset_color%} $(git_prompt)
+%(?..%{$fg[red]%})❯%{$reset_color%} '

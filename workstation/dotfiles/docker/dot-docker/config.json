@@ -1,0 +1,20 @@
+{
+	"auths": {
+		"asia.gcr.io": {},
+		"eu.gcr.io": {},
+		"gcr.io": {},
+		"staging-k8s.gcr.io": {},
+		"us.gcr.io": {}
+	},
+	"HttpHeaders": {
+		"User-Agent": "Docker-Client/18.03.1-ce (darwin)"
+	},
+	"credsStore": "osxkeychain",
+	"credHelpers": {
+		"asia.gcr.io": "gcloud",
+		"eu.gcr.io": "gcloud",
+		"gcr.io": "gcloud",
+		"staging-k8s.gcr.io": "gcloud",
+		"us.gcr.io": "gcloud"
+	}
+}
