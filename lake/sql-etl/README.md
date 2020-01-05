@@ -18,7 +18,7 @@ insert into load_table select from sql_file;
 
 Information about the load table can be infered from the folder
 
-## Catalogue
+## Catalog
 
 Information about cataloging the resulting dataset is specified
 in the metadata.
