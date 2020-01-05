@@ -19,7 +19,7 @@ meaning of the data.
 
 Maybe don't even do this.
 
-### catalogue
+### catalog
 
 Any cataloging that can be done should be done. When was the data
 collected? How was it collected? What is the source? What is the
